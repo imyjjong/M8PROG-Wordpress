@@ -10,3 +10,10 @@
 
     add_theme_support( 'post-thumbnails' );
 
+    function customtheme_setup() {
+        register_nav_menus(array(
+            'primary' => __('Primary Menu', 'customtheme'),
+        ));
+    }
+    add_action('after_setup_theme', 'customtheme_setup');
+    

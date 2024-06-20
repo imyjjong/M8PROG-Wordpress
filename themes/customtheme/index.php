@@ -1,7 +1,13 @@
-<?php
-get_header();
-echo '<pre style="background:darkred; padding: 0rem; width:100%;">';
-print_r( 'index page, this is -- yoda' );
-echo '</pre>';
-die(__FILE__.':'.__LINE__);
-get_footer();
+<?php get_header(); ?>
+<main class="container">
+    <h1 class="mt-5">i believe in miraclesn wejosdkjigbu</h1>
+    <div class="content">
+        <p class="intro">
+            Intro
+        </p>
+        <p>
+            Content
+        </p>
+    </div>
+</main>
+<?php get_footer(); ?>

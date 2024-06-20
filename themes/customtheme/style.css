@@ -1,16 +1,17 @@
-/**
- * Theme Name:        cue
- * Theme URI:         http://localhost
- * Description:       custom wordpress theme, this is
- * Version:           0.0.1
- * Author:            imyjjong
- * Author URI:        http://localhost
- * Tags:              m8wordpress
- * Text Domain:       cue
- * Domain Path:       /languages
- * Tested up to:      6.5
- * Requires at least: 6.4
- * Requires PHP:      8.2
- * License:           GNU General Public License v2.0 or later
- * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #FFFFFF;
+  font-size: 2rem;
+  color: #000000;
+}
+
+/*# sourceMappingURL=style.css.map */
