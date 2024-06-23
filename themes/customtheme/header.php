@@ -10,20 +10,27 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<nav class="navbar">
+<nav class="site-navigation">
     <div class="container">
-        <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
-        <button class="navbar-toggler" type="button">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse">
-            <?php
-            wp_nav_menu(array(
-                'theme_location' => 'primary',
-                'menu_class'     => 'navbar-nav',
-                'container'      => '',
-            ));
-            ?>
+        <div class="site-logo">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
         </div>
+        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'Text_Domain' ); ?></button>
+        <?php
+        wp_nav_menu(
+            [
+                'menu'            => 'header',
+                'link_before'     => '',
+                'link_after'      => '',
+                'menu_class'      => 'menubar',
+                'container'       => 'div',
+                'container_class' => 'collapse navbar-collapse',
+                'container_id'    => 'navbarSupportedContent',
+                'add_li_class'    => 'nav-item',
+                'add_a_class'     => 'nav-link',
+            ]
+        );
+        ?>
     </div>
 </nav>
+
