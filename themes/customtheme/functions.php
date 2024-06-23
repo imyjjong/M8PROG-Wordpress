@@ -1,4 +1,5 @@
 <?php
+    require_once('posttype.php');
 
     function m8prog_enqueue_styles() {
         wp_enqueue_style(
