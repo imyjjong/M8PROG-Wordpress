@@ -112,6 +112,62 @@ body{
     }
 }
 
+.project{
+
+    & article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80rem;
+    }
+
+    &__information{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        &--date{
+            font-weight: 600;
+        }
+
+        &--avatar img{
+            border-radius: 50%;
+            width: 5rem;
+            height: 5rem;
+            object-fit: contain;
+        }
+    }
+
+    &__content p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+//navigation links
+
+.nav-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    
+    & a{
+        text-decoration: none;
+        color: $fontColor;
+        font-weight: 900;
+
+        &:hover{
+            color: $secondaryColor;
+        }
+    }
+}
+
+//footer
+
 .footer{
     background: $fontColor;
     color: $secondaryColor;
@@ -119,5 +175,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10rem;
+    padding: 3rem 8rem;
+
+    &Wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
 }
