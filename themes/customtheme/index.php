@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
-<main class="container my-5">
+<main class="main">
     <?php if ( have_posts() ) : ?>
         <?php while ( have_posts() ) : the_post(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <h1 class="mt-5"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-                <div class="col-lg-8 px-0">
+                <h2 class="post__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                <div class="post__content">
                     <?php the_excerpt(); ?>
                 </div>
             </article>

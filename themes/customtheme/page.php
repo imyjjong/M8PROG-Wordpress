@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
-<main class="container my-5">
+<main class="main">
     <?php the_post(); ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <h1 class="mt-5"><?php the_title(); ?></h1>
-        <div class="col-lg-8 px-0">
+        <h2 class="post__title"><?php the_title(); ?></h2>
+        <div class="post__content">
             <?php the_content(); ?>
         </div>
     </article>

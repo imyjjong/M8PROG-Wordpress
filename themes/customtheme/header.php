@@ -10,24 +10,23 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<nav class="site-navigation">
-    <div class="container">
-        <div class="site-logo">
+<nav class="header">
+    <div class="headerNavigation">
+        <div class="headerNavigation__logo">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
         </div>
-        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'Text_Domain' ); ?></button>
-        <?php
+        <?php 
         wp_nav_menu(
             [
                 'menu'            => 'header',
                 'link_before'     => '',
                 'link_after'      => '',
-                'menu_class'      => 'menubar',
+                'menu_class'      => 'headerNavigation__menu',
                 'container'       => 'div',
-                'container_class' => 'collapse navbar-collapse',
+                'container_class' => 'headerNavigation__menu--items',
                 'container_id'    => 'navbarSupportedContent',
-                'add_li_class'    => 'nav-item',
-                'add_a_class'     => 'nav-link',
+                'add_li_class'    => 'headerNavigation__menu--items-item',
+                'add_a_class'     => 'headerNavigation__menu--items-link',
             ]
         );
         ?>

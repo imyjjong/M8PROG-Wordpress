@@ -1,6 +1,9 @@
+//@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap'); doesnt look right tbh
+
 $background: #FFFFFF;
 $secondaryColor: #FF00E6;
 $fontColor: #000000;
+$secondPink: #E62686;
 
 *, *::before, *::after{
     margin: 0;
@@ -16,4 +19,105 @@ body{
     background: $background;
     font-size: 2rem;
     color: $fontColor;
+    font-family: sans-serif;
+    font-weight: 400;
+    min-height: 100vh;
+}
+
+.header{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 14rem;
+
+    &Navigation{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 4rem;
+        width: 100%;
+
+        &__logo a{
+            color: $fontColor;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 120%;
+        }
+
+        &__menu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & ul{
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+            }
+        }
+    }
+}
+
+//header classes idk how to change:)
+
+.page_item a{
+    text-decoration: none;
+    color: $fontColor;
+    font-weight: 600;
+    padding: 0.6rem 1rem;
+    font-size: 1.8rem;
+
+    &:hover{
+        background: $secondPink;
+        color: $background;
+    }
+}
+
+.current_page_item a{
+    background: $secondPink;
+    color: $background;
+}
+
+.main{
+    width: 100%;
+    padding: 4rem 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.post{
+    background: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 80rem;
+
+    &__title a{
+        text-decoration: none;
+        color: $fontColor;
+        font-weight: 700;
+
+        &:hover{
+            color: $secondaryColor;
+        }
+    }
+}
+
+.footer{
+    background: $fontColor;
+    color: $secondaryColor;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem;
 }

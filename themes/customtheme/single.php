@@ -1,15 +1,15 @@
 <?php get_header(); ?>
 
-<main class="container my-5">
+<main class="main">
     <?php the_post(); ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <h1 class="mt-5"><?php the_title(); ?></h1>
-        <div class="meta">
+        <h2 class="post__title"><?php the_title(); ?></h2>
+        <div class="post__information">
             <p><?php the_date(); ?></p>
             <p><?php echo get_avatar( get_the_author_meta('user_email'), '80', '-' ); ?></p>
             <p><?php the_author_meta('description'); ?></p>
         </div>
-        <div class="col-lg-8 px-0">
+        <div class="post__content">
             <?php the_content(); ?>
         </div>
     </article>
