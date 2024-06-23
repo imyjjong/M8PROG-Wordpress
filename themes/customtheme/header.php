@@ -6,9 +6,15 @@
     <title><?php wp_title('|', true, 'right'); ?> <?php bloginfo('name'); ?></title>
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     <script src="846de9e07b.js"></script>
+    <script src="main.js" defer></script>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php get_header();?>
+<div class="screensaver">
+    <img src="<?php echo get_template_directory_uri(); ?>/screenshot.png" alt="Screensaver Image" id="screensaver-img">
+</div>
+
 <?php wp_body_open(); ?>
 
 <nav class="header">

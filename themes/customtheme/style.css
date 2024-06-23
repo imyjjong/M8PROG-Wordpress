@@ -141,6 +141,11 @@ body {
   height: 5rem;
   object-fit: contain;
 }
+.project__content > figure > figure > img {
+  width: 20rem;
+  height: 100%;
+  object-fit: cover;
+}
 .project__content p {
   display: flex;
   justify-content: center;
@@ -162,6 +167,48 @@ body {
   color: #FF00E6;
 }
 
+.post-12 {
+  background: #000000;
+  color: #FFFFFF;
+  width: 70%;
+  height: 40rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+  padding: 2rem 6rem;
+}
+.post-12 h2 {
+  font-weight: 700;
+  border-bottom: 0.1rem solid #F1F1F1;
+  margin-bottom: 1rem;
+}
+.post-12 > div > div > div > div > div > p > strong {
+  font-weight: 700;
+  margin-top: 2rem;
+}
+.post-12 > div > div:nth-child(2) > p > strong {
+  font-weight: 700;
+  margin-top: 2rem;
+}
+.post-12 > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.fa-phone {
+  color: #FF00E6;
+}
+
+.fa-envelope {
+  color: #FF00E6;
+}
+
 .footer {
   background: #000000;
   color: #FF00E6;
@@ -180,6 +227,31 @@ body {
 
 .widget-container p {
   width: 50rem;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.screensaver {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.screensaver img {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
 }
 
 /*# sourceMappingURL=style.css.map */
