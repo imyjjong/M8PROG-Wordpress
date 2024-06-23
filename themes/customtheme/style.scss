@@ -91,15 +91,23 @@ body{
     gap: 2rem;
 }
 
+.posts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
 .post{
-    background: white;
-    padding: 2rem;
+    background: #F1F1F1;
+    padding: 5rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    width: 80rem;
+    width: 65rem;
 
     &__title a{
         text-decoration: none;
@@ -109,6 +117,24 @@ body{
         &:hover{
             color: $secondaryColor;
         }
+    }
+
+    &__category{
+        color: $background;
+        padding: 1rem;
+
+        &--sd{
+            background: #C80036;
+        }
+        &--gd{
+            background: #088395;
+        }
+    }
+
+    &__content img{
+        width: 50rem;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
@@ -183,4 +209,10 @@ body{
         justify-content: start;
         align-items: center;
     }
+}
+
+//widget
+
+.widget-container p{
+    width: 50rem;
 }

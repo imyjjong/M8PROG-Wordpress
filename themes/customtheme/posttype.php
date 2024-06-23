@@ -32,38 +32,6 @@
     register_post_type( 'yuh', $args );
 
     $labels = [
-        'name'               => __( 'Projects', 'Text_Domain' ),
-        'singular_name'      => __( 'Project', 'Text_Domain' ),
-        'add_new'            => __( 'New Project', 'Text_Domain' ),
-        'add_new_item'       => __( 'Add New Project', 'Text_Domain' ),
-        'edit_item'          => __( 'Edit Project', 'Text_Domain' ),
-        'new_item'           => __( 'New Project', 'Text_Domain' ),
-        'view_item'          => __( 'View Project', 'Text_Domain' ),
-        'search_items'       => __( 'Search Project', 'Text_Domain' ),
-        'not_found'          => __( 'No Project Found', 'Text_Domain' ),
-        'not_found_in_trash' => __( 'No Project found in Trash', 'Text_Domain' ),
-    ];
-
-    $args = [
-        'labels'       => $labels,
-        'has_archive'  => true,
-        'public'       => true,
-        'hierarchical' => false,
-        'supports'     => [
-            'title',
-            'editor',
-            'excerpt',
-            'custom-fields',
-            'thumbnail',
-            'page-attributes',
-        ],
-        'rewrite'      => [ 'slug' => 'project' ],
-        'show_in_rest' => true,
-    ];
-
-    register_post_type( 'yuh', $args );
-
-    $labels = [
         'name'              => _x( 'Origins', 'taxonomy general name', 'Text_Domain' ),
         'singular_name'     => _x( 'Origin', 'taxonomy singular name', 'Text_Domain' ),
         'search_items'      => __( 'Search Origins', 'Text_Domain' ),
@@ -88,4 +56,4 @@
         'rewrite'           => [ 'slug' => 'origin' ],
     ];
 
-    register_taxonomy( 'origin', 'project', 'yuh', $args );
+    register_taxonomy( 'origin', 'yuh', $args );
