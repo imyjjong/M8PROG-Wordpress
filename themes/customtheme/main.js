@@ -43,7 +43,7 @@ function moveImage(){
     screensaverImg.style.left = posX + 'px';
     screensaverImg.style.top = posY + 'px';
 
-    if(idleTime > 1){
+    if(idleTime > 2){
         requestAnimationFrame(moveImage);
     }
 }

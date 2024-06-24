@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-<main class="main">
     <section class="posts">
         <?php if ( have_posts() ) : ?>
             <?php while ( have_posts() ) : the_post(); ?>
@@ -37,6 +36,5 @@
             <p><?php esc_html_e( 'Geen berichten gevonden' ); ?></p>
         <?php endif; ?>
     </section>
-</main>
 
 <?php get_footer(); ?>
