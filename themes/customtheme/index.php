@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<?php echo do_shortcode( '[searchandfilter fields="search,category"]' ); ?>
     <section class="posts">
         <?php if ( have_posts() ) : ?>
             <?php while ( have_posts() ) : the_post(); ?>

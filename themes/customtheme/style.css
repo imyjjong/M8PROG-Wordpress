@@ -152,6 +152,86 @@ body {
   font-weight: 600;
 }
 
+.searchandfilter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+}
+.searchandfilter > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.searchandfilter > div > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  height: 100%;
+}
+.searchandfilter > div > ul > li:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.searchandfilter > div > ul > li:nth-child(1) > input {
+  background: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  border-bottom: 0.2rem solid #FF00E6;
+  font-size: 100%;
+  padding: 0 0.8rem;
+}
+.searchandfilter > div > ul > li:nth-child(1) > input:focus {
+  outline: none;
+}
+.searchandfilter > div > ul > li:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.searchandfilter > div > ul > li:nth-child(2) > select {
+  background: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+  padding: 0.8rem;
+}
+.searchandfilter > div > ul > li:nth-child(2) > select:focus {
+  outline: 0.2rem solid #FF00E6;
+}
+.searchandfilter > div > ul > li:nth-child(3) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.searchandfilter > div > ul > li:nth-child(3) > input {
+  background: #FF00E6;
+  border: 0.2rem solid #FFFFFF;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 100%;
+  width: 100%;
+  height: 100%;
+  padding: 0.4rem 1rem;
+}
+.searchandfilter > div > ul > li:nth-child(3) > input:hover {
+  cursor: pointer;
+  background: #FFFFFF;
+  border: 0.2rem solid #FF00E6;
+  color: #FF00E6;
+}
+
 .posts {
   display: flex;
   flex-direction: column;
@@ -271,6 +351,7 @@ body {
   padding: 0.2rem 0rem;
   font-size: 100%;
   border-bottom: 0.2rem solid #FF00E6;
+  font-family: inherit;
 }
 .usp-name > input:focus, .usp-name select:focus, .usp-name textarea:focus, .usp-url > input:focus, .usp-url select:focus, .usp-url textarea:focus, .usp-title > input:focus, .usp-title select:focus, .usp-title textarea:focus, .usp-category > input:focus, .usp-category select:focus, .usp-category textarea:focus, .usp-custom > input:focus, .usp-custom select:focus, .usp-custom textarea:focus, .usp-content > input:focus, .usp-content select:focus, .usp-content textarea:focus {
   outline: none;
@@ -286,19 +367,31 @@ body {
 }
 .usp-images #user-submitted-image > input[type=file]::-webkit-file-upload-button {
   background: #FF00E6;
-  border: none;
+  border: 0.2rem solid #FFFFFF;
   padding: 0.9rem;
   font-weight: 600;
   color: #FFFFFF;
   font-size: 100%;
+  transition: 0.2s all;
+}
+.usp-images #user-submitted-image > input[type=file]::-webkit-file-upload-button:hover {
+  background: #FFFFFF;
+  border: 0.2rem solid #FF00E6;
+  color: #FF00E6;
 }
 .usp-submit {
   background: #FF00E6;
-  border: none;
+  border: 0.2rem solid #FFFFFF;
   padding: 0.9rem;
   font-weight: 600;
   color: #FFFFFF;
   font-size: 100%;
+  transition: 0.2s all;
+}
+.usp-submit:hover {
+  background: #FFFFFF;
+  border: 0.2rem solid #FF00E6;
+  color: #FF00E6;
 }
 
 .post-12 {
