@@ -229,3 +229,47 @@ header
     background: $secondPink;
     color: $background;
 }
+
+//Projects
+
+    & article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80rem;
+    }
+
+    &__information{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        &--date{
+            font-weight: 600;
+        }
+
+        &--avatar img{
+            border-radius: 50%;
+            width: 5rem;
+            height: 5rem;
+            object-fit: contain;
+        }
+    }
+
+    &__content{
+
+        & > figure > figure > img{
+            
+        width: 20rem;
+        height: 100%;
+        object-fit: cover;
+    }}
+
+    &__content p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

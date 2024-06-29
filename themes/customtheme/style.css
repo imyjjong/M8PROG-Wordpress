@@ -306,37 +306,77 @@ body {
   object-fit: cover;
 }
 
-.project article {
+.main__project {
+  width: 100%;
+  height: 100%;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80rem;
 }
-.project__information {
+
+.project {
+  width: 100%;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
-.project__information--date {
-  font-weight: 600;
+.project__content {
+  position: relative;
+  width: 100%;
 }
-.project__information--avatar img {
-  border-radius: 50%;
-  width: 5rem;
-  height: 5rem;
-  object-fit: contain;
-}
-.project__content > figure > figure > img {
-  width: 20rem;
-  height: 100%;
+.project__content > img {
+  width: 100%;
+  height: 45rem;
   object-fit: cover;
 }
-.project__content p {
+.project__title {
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  font-size: 250%;
+}
+.project > article {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  background: none;
+}
+.project__information {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
+  padding: 1rem 10rem;
+}
+.project__information--wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.project__information--author a {
+  text-decoration: none;
+  color: #000000;
+}
+.project__information--date {
+  font-size: 90%;
+}
+.project__information--category a {
+  text-decoration: none;
+  color: #000000;
+}
+.project__content {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.project__content p:nth-of-type(2) {
+  width: 80%;
 }
 
 .nav-links {
@@ -344,6 +384,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  padding: 2rem;
 }
 .nav-links a {
   text-decoration: none;
@@ -359,9 +400,13 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 2rem;
+  padding: 4rem;
+}
+.post-122 .post__title {
+  display: none;
 }
 
 .usp-name, .usp-url, .usp-title, .usp-category, .usp-custom, .usp-content {
