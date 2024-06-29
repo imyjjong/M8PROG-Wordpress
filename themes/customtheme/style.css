@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -82,9 +83,6 @@ body {
 }
 
 .post-7 h2 {
-  position: absolute;
-  top: 55%;
-  left: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,6 +98,15 @@ body {
   width: 100%;
 }
 
+.home__heading {
+  position: relative;
+}
+.home__heading--title > div > h2 {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+}
+
 .heading__image {
   width: 100%;
   height: 40rem;
@@ -108,12 +115,11 @@ body {
   width: 100% !important;
   height: 100%;
   object-fit: cover;
-  box-shadow: inset 2rem 1rem 9rem black;
 }
 
 .main__home {
   width: 100%;
-  padding: 4rem 26rem;
+  padding: 4rem 34rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -138,7 +144,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 120%;
+  font-size: 110%;
+  font-family: "Inter", sans-serif;
 }
 
 .home__students {
@@ -151,6 +158,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 6rem;
+  padding: 4rem;
 }
 
 .post {
@@ -180,6 +188,9 @@ body {
 }
 .post__category--gd {
   background: #088395;
+}
+.post__image {
+  width: 100%;
 }
 .post__content img {
   width: 50rem;
@@ -235,18 +246,69 @@ body {
   color: #FF00E6;
 }
 
-.post-12 {
-  background: #000000;
-  color: #FFFFFF;
-  width: 70%;
-  height: 40rem;
-  padding: 2rem;
+.post-122 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.usp-name, .usp-url, .usp-title, .usp-category, .usp-custom, .usp-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
+}
+.usp-name > label, .usp-url > label, .usp-title > label, .usp-category > label, .usp-custom > label, .usp-content > label {
+  display: none !important;
+}
+.usp-name > input, .usp-name select, .usp-name textarea, .usp-url > input, .usp-url select, .usp-url textarea, .usp-title > input, .usp-title select, .usp-title textarea, .usp-category > input, .usp-category select, .usp-category textarea, .usp-custom > input, .usp-custom select, .usp-custom textarea, .usp-content > input, .usp-content select, .usp-content textarea {
+  background: none;
+  border: none;
+  padding: 0.2rem 0rem;
+  font-size: 100%;
+  border-bottom: 0.2rem solid #FF00E6;
+}
+.usp-name > input:focus, .usp-name select:focus, .usp-name textarea:focus, .usp-url > input:focus, .usp-url select:focus, .usp-url textarea:focus, .usp-title > input:focus, .usp-title select:focus, .usp-title textarea:focus, .usp-category > input:focus, .usp-category select:focus, .usp-category textarea:focus, .usp-custom > input:focus, .usp-custom select:focus, .usp-custom textarea:focus, .usp-content > input:focus, .usp-content select:focus, .usp-content textarea:focus {
+  outline: none;
+}
+.usp-images #usp-upload-message {
+  display: none !important;
+}
+.usp-images #user-submitted-image {
+  display: flex;
+  justify-content: start;
+  align-items: center;
   gap: 1rem;
-  padding: 2rem 6rem;
+}
+.usp-images #user-submitted-image > input[type=file]::-webkit-file-upload-button {
+  background: #FF00E6;
+  border: none;
+  padding: 0.9rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: 100%;
+}
+.usp-submit {
+  background: #FF00E6;
+  border: none;
+  padding: 0.9rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: 100%;
+}
+
+.post-12 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 4rem;
 }
 .post-12 h2 {
   font-weight: 700;
@@ -267,6 +329,35 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+}
+
+.main__contact {
+  width: 100%;
+}
+.main__contact > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  gap: 2rem;
+  font-size: 110%;
+}
+
+.contact__telephone {
+  background: #000000;
+  color: #FFFFFF;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact__telephone > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
 }
 
 .fa-phone {

@@ -28,12 +28,15 @@
                         if (!empty($matches)) {
                             echo $matches[0];
                         }
+                        if ( has_post_thumbnail() ) {
+                            the_post_thumbnail();
+                        }
                         ?>
                     </div>
                 </article>
             <?php endwhile; ?>
         <?php else : ?>
-            <p><?php esc_html_e( 'Geen berichten gevonden' ); ?></p>
+            <p><?php esc_html_e( 'miss gaga' ); ?></p>
         <?php endif; ?>
     </section>
 

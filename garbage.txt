@@ -32,3 +32,142 @@ echo         '<p>Content</p>';
 echo     '</div>';
 echo '</main>';
 get_footer();
+
+//dropdown account
+<!doctype html>
+<html <?php language_attributes(); ?>>
+<head>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><?php wp_title('|', true, 'right'); ?> <?php bloginfo('name'); ?></title>
+    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
+    <script src="846de9e07b.js"></script>
+    <script src="main.js" defer></script>
+    <?php wp_head(); ?>
+</head>
+<body <?php body_class(); ?>>
+<?php get_header();?>
+<div class="screensaver">
+    <img src="<?php echo get_template_directory_uri(); ?>/logo.png" alt="Screensaver Image" id="screensaver-img">
+</div>
+
+<?php wp_body_open(); ?>
+<?php
+// Controleer of de gebruiker is ingelogd
+if ( is_user_logged_in() ) {
+    // Ingelogd: toon uitloggen en accountopties
+    $logout_url = wp_logout_url( home_url() ); // Uitloggen URL
+    $account_url = home_url( '/account/' ); // Accountpagina URL
+?>
+<nav class="header">
+    <div class="headerNavigation">
+        <div class="headerNavigation__logo">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">MA Projects</a>
+        </div>
+        <div class="headerNavigation__menu">
+            <ul>
+                <li class="page_item page-item-10"><a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">About</a></li>
+                <li class="page_item page-item-111"><a href="<?php echo esc_url( home_url( '/account/' ) ); ?>">Account</a></li>
+                <li class="page_item page-item-12"><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Contact</a></li>
+                <li class="page_item page-item-7 current_page_item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-current="page">Home</a></li>
+            </ul>
+        </div>
+        <div class="header-icons">
+            <div class="dropdown">
+                <button class="dropbtn" aria-controls="dropdownContent" aria-expanded="false">
+                    <span class="screen-reader-text">Accountopties</span>
+                    <span class="menu-icon">☰</span> <!-- Icon voor dropdown -->
+                </button>
+                <div id="dropdownContent" class="dropdown-content">
+                    <a href="<?php echo esc_url( wp_logout_url() ); ?>">Uitloggen</a>
+                    <a href="<?php echo esc_url( $account_url ); ?>">Mijn Account</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<?php } else {
+    // Niet ingelogd: toon inloggen en registratieopties
+?>
+<nav class="header">
+    <div class="headerNavigation">
+        <div class="headerNavigation__logo">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">MA Projects</a>
+        </div>
+        <div class="headerNavigation__menu">
+            <ul>
+                <li class="page_item page-item-10"><a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">About</a></li>
+                <li class="page_item page-item-111"><a href="<?php echo esc_url( home_url( '/account/' ) ); ?>">Account</a></li>
+                <li class="page_item page-item-12"><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Contact</a></li>
+                <li class="page_item page-item-7 current_page_item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-current="page">Home</a></li>
+                <li class="page_item page-item-108"><a href="<?php echo esc_url( home_url( '/log-in/' ) ); ?>">Log In</a></li>
+                <li class="page_item page-item-110"><a href="<?php echo esc_url( home_url( '/register/' ) ); ?>">Register</a></li>
+            </ul>
+        </div>
+        <div class="header-icons">
+            <div class="dropdown">
+                <button class="dropbtn" aria-controls="dropdownContent" aria-expanded="false">
+                    <span class="screen-reader-text">Accountopties</span>
+                    <span class="menu-icon">☰</span> <!-- Icon voor dropdown -->
+                </button>
+                <div id="dropdownContent" class="dropdown-content">
+                    <a href="<?php echo esc_url( home_url( '/log-in/' ) ); ?>">Inloggen</a>
+                    <a href="<?php echo esc_url( home_url( '/register/' ) ); ?>">Registreren</a>
+                    <a href="<?php echo esc_url( home_url( '/password-reset/' ) ); ?>">Wachtwoord Reset</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<?php } ?>
+
+document.addEventListener("DOMContentLoaded", function() {
+    const dropdownButton = document.querySelector('.dropbtn');
+    const dropdownContent = document.querySelector('.dropdown-content');
+
+    dropdownButton.addEventListener('click', function() {
+        dropdownContent.classList.toggle('show');
+    });
+
+    // Sluit dropdown als er buiten wordt geklikt
+    window.addEventListener('click', function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            dropdownContent.classList.remove('show');
+        }
+    });
+});
+
+
+//account dropdown
+
+/* CSS voor dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
