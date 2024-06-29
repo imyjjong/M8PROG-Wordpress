@@ -34,57 +34,71 @@ body{
     justify-content: start;
     align-items: center;
     width: 100%;
-    padding: 2rem 14rem;
+    
 
     &Navigation{
         display: flex;
-        justify-content: start;
+        justify-content: center;
         align-items: center;
         gap: 4rem;
-        width: 100%;
+        padding: 2rem 10rem;
 
         &__logo a{
-            color: $fontColor;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 120%;
+            color: $secondaryColor;
+            font-weight: 700;
+            font-size: 150%;
+            padding: 1rem 0.4rem;
         }
 
         &__menu{
             display: flex;
             justify-content: center;
             align-items: center;
+            gap: 2rem;
+            list-style: none;
 
-            & ul{
-                list-style: none;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 2rem;
-            }
-        }
-    }
-}
-
-//header classes idk how to change:)
-
-.page_item a{
-    text-decoration: none;
-    color: $fontColor;
-    font-weight: 600;
-    padding: 0.6rem 1rem;
-    font-size: 1.8rem;
-
-    &:hover{
-        background: $secondPink;
-        color: $background;
+            & li a{
+                text-decoration: none;
+                color: $fontColor;
+                font-weight: 600;
+                padding: 0.6rem 1rem;
+                font-size: 1.8rem;
+                transition: 0.2s all;
+            
+                &:hover{
+                    background: $secondPink;
+                    color: $background;
+                }
+        }}
     }
 }
 
 .current_page_item a{
     background: $secondPink;
-    color: $background;
+    color: $background !important;
 }
+
+.menu-item-162 a{
+        border: 0.2rem solid $secondaryColor;
+        height: 4rem;
+        aspect-ratio: 1/1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $secondaryColor;
+        color: $background !important;
+        font-weight: 600 !important;
+        font-size: 110% !important;
+        transition: 0.2s all;
+
+        &:hover{
+            background: $background !important;
+            color: $secondaryColor !important;
+        }
+    }
+    
+
 
 //main
 
@@ -148,7 +162,6 @@ body{
 
 .main__home{
     width: 100%;
-    padding: 4rem 34rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -176,14 +189,28 @@ body{
     align-items: center;
     font-size: 110%;
     font-family: "Inter", sans-serif;
+    padding: 1rem 34rem;
 }
 
 .home__students{
     font-weight: 600;
+    padding: 1rem 34rem;
+
 }
 
 .home__information{
+    padding: 1rem 34rem;
+}
 
+.home__image{
+    width: 80%;
+    height: 30rem;
+
+    & > img{
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
 }
 
 //filters
@@ -191,22 +218,25 @@ body{
 .searchandfilter{
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 5rem;
+    align-items: start;
+    height: 95%;
+    padding: 4rem;
+    border-right: 0.2rem solid $grey;
 
     & > div{
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 100%;
+        height: 5rem;
+        padding: 4rem;
 
         & > ul{
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            align-items: center;
-            gap: 4rem;
+            align-items: start;
+            gap: 8rem;
             width: 100%;
             height: 100%;
             
@@ -214,27 +244,9 @@ body{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 100%;
-
-                & > input{
-                    background: none;
-                    border: none;
-                    width: 100%;
-                    height: 100%;
-                    border-bottom: 0.2rem solid $secondaryColor;
-                    font-size: 100%;
-                    padding: 0 0.8rem;
-
-                    &:focus{
-                        outline: none;
-                    }
-                }
-            }
-            & > li:nth-child(2){
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100%;
+                height: auto;
+                color: $fontColor;
+                padding: 1rem;
 
                 & > select{
                     background: none;
@@ -247,9 +259,14 @@ body{
                     &:focus{
                         outline: 0.2rem solid $secondaryColor;
                     }
+
+                    & > option:nth-child(1){
+                        display: none;
+                    }
                 }
             }
-            & > li:nth-child(3){
+            
+            & > li:nth-child(2){
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -262,8 +279,7 @@ body{
                     font-weight: 600;
                     font-size: 100%;
                     width: 100%;
-                    height: 100%;
-                    padding: 0.4rem 1rem;
+                    padding: 0.8rem 1rem;
 
                     &:hover{
                         cursor: pointer;
@@ -279,6 +295,14 @@ body{
 
 //posts
 
+.main__posts{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    width: 100%;
+    padding: 0;
+    gap: 0;
+}
+
 .posts{
     display: flex;
     flex-direction: column;
@@ -286,6 +310,10 @@ body{
     align-items: center;
     gap: 6rem;
     padding: 4rem;
+
+    &__title{
+        font-size: 150%;
+    }
 }
 
 .post{
@@ -296,7 +324,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    width: 65rem;
+    width: 55rem;
 
     &__title a{
         text-decoration: none;
@@ -325,7 +353,7 @@ body{
     }
 
     &__content img{
-        width: 50rem;
+        width: 45rem;
         height: 100%;
         object-fit: cover;
     }
@@ -537,11 +565,13 @@ body{
     align-items: center;
 
     & > div{
+        list-style: none;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: start;
-        gap: 1rem;
+        gap: 2rem;
+        width: 100%;
     }
 }
 
@@ -551,6 +581,84 @@ body{
 
 .fa-envelope{
     color: $secondaryColor;
+}
+
+//about
+
+.post-10{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    & .post__title{
+        display: none;
+    }
+
+    & .post__content{
+        width: 100%;
+    }
+}
+
+.about__heading{
+    position: relative;
+}
+
+.about__image{
+    width: 100%;
+    height: 35rem;
+
+    & > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.about__title{
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    font-size: 300%;
+}
+
+.main__about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40rem;
+}
+
+.about{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 4rem;
+
+    &__article{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+
+        &--information{
+            font-size: 110%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        &--information:nth-child(3){
+            font-weight: 600;
+        }
+    }
 }
 
 //footer

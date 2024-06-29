@@ -171,3 +171,61 @@ document.addEventListener("DOMContentLoaded", function() {
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
+
+header
+
+.header{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 14rem;
+
+    &Navigation{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 4rem;
+        width: 100%;
+
+        &__logo a{
+            color: $fontColor;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 120%;
+        }
+
+        &__menu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & ul{
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+            }
+        }
+    }
+}
+
+.page_item a{
+    text-decoration: none;
+    color: $fontColor;
+    font-weight: 600;
+    padding: 0.6rem 1rem;
+    font-size: 1.8rem;
+    transition: 0.2s all;
+
+    &:hover{
+        background: $secondPink;
+        color: $background;
+    }
+}
+
+.current_page_item a{
+    background: $secondPink;
+    color: $background;
+}
